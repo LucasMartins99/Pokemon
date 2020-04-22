@@ -1,4 +1,4 @@
-# POKEMON
+# POKÉMON BY CITY
 ![Preview-Screens](https://github.com/LucasMartins99/Pokemon/blob/master/Screen.png)
 
 ## Sobre o projeto
@@ -62,7 +62,7 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
   ```
   $ yarn
   ```
-  _or_
+      _or_
 
   ```
   $ npm install
@@ -73,11 +73,12 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
   ```
   $ yarn run dev
   ```
-  _or_
+      _or_
 
   ```
   $ npm run dev
   ```
+  Após estes comandos irá abrir no browser a aplicação na porta padrão 3000.
 
   ## Tecnologias utilizadas
 
@@ -97,7 +98,8 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
   Você pode abrir quantas issues que quiser, ficarei feliz em analizar e responder todas.
 
   Email: fabio.lucaslima@outlook.com
-  Meu LinkedIn: [LinkedIn](https://www.linkedin.com/in/fabio-lima-b78a1b15a/).
+
+  Meu LinkedIn: [LinkedIn](https://www.linkedin.com/in/fabio-lima-b78a1b15a/)
 
   Obrigado !!
 
