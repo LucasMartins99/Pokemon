@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   max-width: 700px;
@@ -36,7 +37,7 @@ export const SubmitButton = styled.button`
   margin-left: 5px;
   border-radius: 4px;
 `;
-export const List = styled.ul`
+export const Historic = styled.ul`
   list-style: none;
   margin-top: 30px;
   li {
@@ -47,6 +48,18 @@ export const List = styled.ul`
     align-items: center;
     & + li {
       border-top: 1px solid #eee;
+    }
+  }
+  button {
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    transition: background 0.2;
+    background: #4888f5;
+    color: #fff;
+    height: 30px;
+    &:hover {
+      background: ${darken(0.03, '#4888f5')};
     }
   }
   a {

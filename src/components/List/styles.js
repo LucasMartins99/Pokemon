@@ -21,9 +21,8 @@ export const ModalArea = styled.div`
   min-width: 50%;
 `;
 export const Loading = styled.img`
-  width: 400px;
-  height: 300px;
-  border-radius: 7px;
+  width: 100%;
+  height: 100%;
 `;
 export const Card = styled.div`
   display: flex;
@@ -41,15 +40,11 @@ export const Card = styled.div`
       line-height: 20px;
       margin-bottom: 6px;
     }
-    img {
-      align-self: center;
-      max-width: 300px;
-      max-height: 100px;
-    }
   }
   img {
     align-self: center;
     max-width: 300px;
+    max-height: 100px;
   }
   button {
     margin-top: 22px;

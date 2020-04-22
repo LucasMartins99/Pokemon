@@ -2,9 +2,10 @@ import React, { useRef, useState } from 'react';
 import { MdAddLocation, MdTrackChanges } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import { Container, Form, SubmitButton, List } from './styles';
+import { Container, Form, SubmitButton, Historic } from './styles';
 import { addPokemonRequest } from '../../store/modules/pokemons/actions';
 import Modal from '../../components/Modal';
+import List from '../../components/List';
 
 export default function Main() {
   const { register, handleSubmit } = useForm();
@@ -14,6 +15,13 @@ export default function Main() {
   const pokemons = useSelector((state) => state.pokemons);
 
   const [modalVisible, setModalVisible] = useState(false);
+  const [listVisible, setListVisible] = useState(false);
+  const [name, setName] = useState('');
+
+  const handleOpenList = (item) => {
+    setListVisible(true);
+    setName(item);
+  };
 
   function onSubmit(data) {
     dispatch(addPokemonRequest(data.city));
@@ -24,6 +32,7 @@ export default function Main() {
   return (
     <Container>
       <Modal visible={modalVisible} setVisible={setModalVisible} />
+      <List visible={listVisible} name={name} setVisible={setListVisible} />
       <h1>
         {' '}
         <MdAddLocation />
@@ -41,13 +50,16 @@ export default function Main() {
         </SubmitButton>
       </Form>
 
-      <List>
+      <Historic>
         {pokemons.map((pokemon) => (
           <li key={pokemon.name}>
             <span>{pokemon.name}</span>
+            <button type="button" onClick={() => handleOpenList(pokemon.name)}>
+              See again
+            </button>
           </li>
         ))}
-      </List>
+      </Historic>
     </Container>
   );
 }

@@ -10,3 +10,8 @@ export function addPokemonSucess(pokemon) {
     pokemon,
   };
 }
+export function addPokemonFailure() {
+  return {
+    type: '@pokemon/ADD_FAILURE',
+  };
+}

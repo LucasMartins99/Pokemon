@@ -1,7 +1,7 @@
 import { call, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import api from '../../../services/api';
-import { addPokemonSucess } from './actions';
+import { addPokemonSucess, addPokemonFailure } from './actions';
 
 function* addToPokemon({ city }) {
   try {
@@ -11,9 +11,10 @@ function* addToPokemon({ city }) {
     };
 
     yield put(addPokemonSucess(data));
-    toast.success('Pokemon encotrado');
+    toast.success('Pokemon found');
   } catch (err) {
-    console.log(err);
+    toast.error('City not found, try again');
+    yield put(addPokemonFailure());
   }
 }
 export default all([takeLatest('@pokemon/ADD_REQUEST', addToPokemon)]);
