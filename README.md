@@ -15,7 +15,7 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
 
 1-) Não há funcionalidade de login ou cadastro.
 
-2-) Caso o pokémon não tem foto na API será exibida uma foto padrão.
+2-) Caso o pokémon não tenha foto na API será exibida uma foto padrão.
 
 3-) Aplicação toda em inglês.
 
@@ -44,7 +44,7 @@ Este projeto faz parte de um desafio que foi proposto como um teste em um proces
 
   ### Pré-requisitos
 
-  Para rodar está aplicação em modo desenvolvimento você precisa ter o NPM instalado ou o YARN e também estar com a API rodando em máquina local. API: https://github.com/LucasMartins99/API-Pokemon
+  Para rodar está aplicação em modo desenvolvimento você precisa ter o NPM instalado ou o YARN e também estar com a API rodando em sua máquina local API: https://github.com/LucasMartins99/API-Pokemon
 
   ### Instalando
 
